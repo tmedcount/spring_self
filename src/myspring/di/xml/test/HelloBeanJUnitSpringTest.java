@@ -26,18 +26,17 @@ public class HelloBeanJUnitSpringTest {
 	@Test
 	public void test2() {
 		
-		Hello hello = (Hello) context.getBean("hello");
-		Hello hello2 = (Hello) context.getBean("hello");
+		Hello hello = (Hello) context.getBean("hello2");
+		Hello hello2 = (Hello) context.getBean("hello2");
 		
 		assertSame(hello, hello2);
 	}
 	
 	@Test
-	@Ignore
 	public void test1() {
 		
 		//2. Hello Bean 가져오기
-		Hello hello = (Hello) context.getBean("hello");
+		Hello hello = (Hello) context.getBean("hello2");
 		assertEquals("Hello Spring", hello.sayHello());
 		hello.print();
 		
