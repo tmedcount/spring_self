@@ -49,7 +49,7 @@ public class UserDaoImplJDBC implements UserDao {
 		String SQL = "insert into users (userid, name, gender,city) values (?, ?, ?, ?)";
 		jdbcTemplate.update(SQL, user.getUserId(), user.getName(), user.getGender(), user.getCity());
 		
-		System.out.println("µî·ÏµÈ Record UserId=" + user.getUserId() + " Name=" + user.getName());
+		System.out.println("ë“±ë¡ëœ Record UserId=" + user.getUserId() + " Name=" + user.getName());
 	}
 
 	public List<UserVO> readAll() {
@@ -62,14 +62,14 @@ public class UserDaoImplJDBC implements UserDao {
 	public void delete(String id) {
 		String SQL = "delete from users where userid = ?"; 
 		jdbcTemplate.update(SQL, id); 
-		System.out.println("»èÁ¦µÈ Record with ID = " + id ); 
+		System.out.println("ì‚­ì œëœ Record with ID = " + id ); 
 	}
 
 	//@Override
 	public void update(UserVO user) {
 		String SQL = "update users  set name = ?, gender = ?, city = ? where userid = ?"; 
 		jdbcTemplate.update(SQL, user.getName(), user.getGender(), user.getCity(),user.getUserId()); 
-		System.out.println("°»½ÅµÈ Record with ID = " + user.getUserId() ); 
+		System.out.println("ê°±ì‹ ëœ Record with ID = " + user.getUserId() ); 
 	}
 
 
